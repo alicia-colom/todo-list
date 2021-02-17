@@ -10,7 +10,7 @@ const TodoListItem: React.FC<Props> = (props) => {
 		<li>
 			<label
 				htmlFor="done"
-				// style={{ textDecoration: todo.done ? 'line-through' : undefined }}
+				// style={{ textDecoration: props.todo.done ? 'line-through' : undefined }}
 			>
 				<input
 					type="checkbox"

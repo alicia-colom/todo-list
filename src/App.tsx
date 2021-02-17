@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import Footer from './components/Footer';
 import CheckImage from './images/check.png';
+import './stylesheets/App.scss';
 
 const initialTodos: Todo[] = [
 	{
@@ -36,14 +38,16 @@ function App() {
 	};
 
 	return (
-		<>
+		<div className="main">
 			<h1>
 				<img src={CheckImage} alt="To do list" />
 			</h1>
 			<TodoForm addTodo={addTodo} />
 			<h2>To do list:</h2>
 			<TodoList todos={todos} toggleTodo={toggleTodo} />
-		</>
+
+			<Footer />
+		</div>
 	);
 }
 
