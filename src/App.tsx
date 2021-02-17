@@ -38,14 +38,15 @@ function App() {
 	};
 
 	return (
-		<div className="main">
-			<h1>
-				<img src={CheckImage} alt="To do list" />
-			</h1>
-			<TodoForm addTodo={addTodo} />
-			<h2>To do list:</h2>
-			<TodoList todos={todos} toggleTodo={toggleTodo} />
-
+		<div className="page">
+			<div className="main">
+				<h1>
+					<img src={CheckImage} alt="To do list" />
+				</h1>
+				<TodoForm addTodo={addTodo} />
+				<h2>To do list :</h2>
+				<TodoList todos={todos} toggleTodo={toggleTodo} />
+			</div>
 			<Footer />
 		</div>
 	);

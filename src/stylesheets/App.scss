@@ -4,6 +4,22 @@
 	box-sizing: border-box;
 }
 
-// .main {
+.page {
+	background-image: url('../images/bg-blue.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	position: relative;
+	min-height: 100vh;
+}
 
-// }
+.main {
+	padding-bottom: 170px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: #fefefe;
+	font-family: 'Indie Flower';
+
+}

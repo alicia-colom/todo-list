@@ -1,0 +1,81 @@
+// #f5df4d  #939597  #
+
+.form {
+	width: 300px;
+
+	&__searchBox {
+		width: 100%;
+		height: 27px;
+		background-color: #fefefe;
+		border: 1px solid #50bfa9;
+		border-radius: 5px;
+
+		display: flex;
+		align-items: center;
+		&:hover {
+			cursor: auto;
+			border: 1px solid #b55dd7;
+		}
+		&--icon {
+			margin: 0 6px 0 8px;
+			color: #b55dd7;
+			font-size: 0.9rem;
+		}
+		&--textArea {
+			width: 220px;
+			padding: 0 8px;
+			background-color: #fefefe;
+			border: none;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	&__push {
+		position: relative;
+		width: 100%;
+		height: 27px;
+		color: #fefefe;
+		font-family: 'Lato';
+		font-weight: bold;
+		font-size: 0.85rem;
+		display: block;
+		margin: 4px 0 1rem 0;
+		outline: none;
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fefefe;
+
+		&:before {
+			background: #f0f0f0;
+			background-image: -webkit-gradient(
+				linear,
+				0% 0%,
+				0% 100%,
+				from(#d0d0d0),
+				to(#f0f0f0)
+			);
+		}
+		&:active {
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+				0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+			top: 5px;
+		}
+
+		&--btn {
+			text-shadow: -0.8px -0.8px 0 #307265;
+			background: #50bfa9;
+			border: 1px solid #379aa4;
+			background-image: linear-gradient(to bottom, #59d4bc, #50bfa9);
+			box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+				0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #209b82,
+				0 4px 2px rgba(0, 0, 0, 0.5);
+
+			&:hover {
+				background: #59d4bc;
+				background-image: linear-gradient(to bottom, #50bfa9, #59d4bc);
+				cursor: pointer;
+			}
+		}
+	}
+}

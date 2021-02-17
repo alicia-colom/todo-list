@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../stylesheets/TodoForm.scss';
 
 interface Props {
 	addTodo: AddTodo;
@@ -19,15 +20,27 @@ const TodoForm: React.FC<Props> = (props) => {
 
 	return (
 		<form>
+			<div className="form__searchBox">
+				<input
+					type="text"
+					name="writeTask"
+					id="writeTask"
+					onChange={handleInputText}
+					className="form__searchBox--textArea"
+					placeholder="For example, buy milk..."
+					required
+				/>
+				<i
+					className="fa fa-pencil form__searchBox--icon"
+					aria-hidden="true"
+				></i>
+			</div>
 			<input
-				type="text"
-				name="writeTask"
-				id="writeTask"
-				onChange={handleInputText}
+				type="submit"
+				onClick={handleSubmit}
+				className="form__push form__push--btn "
+				value="Add"
 			/>
-			<button type="submit" onClick={handleSubmit}>
-				Add
-			</button>
 		</form>
 	);
 };
