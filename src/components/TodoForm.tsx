@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../stylesheets/TodoForm.scss';
 
 interface Props {
@@ -6,10 +6,10 @@ interface Props {
 }
 
 const TodoForm: React.FC<Props> = (props) => {
-	const [newTask, setNewTask] = useState('');
+	const [newTask, setNewTask] = useState<string>('');
 
 	const handleInputText = (ev: React.ChangeEvent<HTMLInputElement>) => {
-		setNewTask(ev.currentTarget.value);
+		setNewTask(ev.target.value);
 	};
 
 	const handleSubmit = (ev: React.MouseEvent<HTMLButtonElement>) => {
@@ -19,15 +19,17 @@ const TodoForm: React.FC<Props> = (props) => {
 	};
 
 	return (
-		<form>
+		<form onSubmit={handleSubmit}>
 			<div className="form__searchBox">
 				<input
 					type="text"
 					name="writeTask"
 					id="writeTask"
 					onChange={handleInputText}
+					value={newTask}
 					className="form__searchBox--textArea"
 					placeholder="For example, buy milk..."
+					autoFocus={true}
 					required
 				/>
 				<i
@@ -35,12 +37,9 @@ const TodoForm: React.FC<Props> = (props) => {
 					aria-hidden="true"
 				></i>
 			</div>
-			<input
-				type="submit"
-				onClick={handleSubmit}
-				className="form__push form__push--btn "
-				value="Add"
-			/>
+			<button type="submit" className="form__push form__push--btn ">
+				Add
+			</button>
 		</form>
 	);
 };

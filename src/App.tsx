@@ -7,11 +7,7 @@ import './stylesheets/App.scss';
 
 const initialTodos: Todo[] = [
 	{
-		task: 'task 1',
-		done: false,
-	},
-	{
-		task: 'task 2',
+		task: 'Finish todo app',
 		done: true,
 	},
 ];
