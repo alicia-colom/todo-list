@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
 import TodoForm from './components/TodoForm';
+import CheckImage from './images/check.png';
 
 const initialTodos: Todo[] = [
 	{
@@ -36,7 +37,9 @@ function App() {
 
 	return (
 		<>
-			<h1>Don't miss a thing</h1>
+			<h1>
+				<img src={CheckImage} alt="To do list" />
+			</h1>
 			<TodoForm addTodo={addTodo} />
 			<h2>To do list:</h2>
 			<TodoList todos={todos} toggleTodo={toggleTodo} />
